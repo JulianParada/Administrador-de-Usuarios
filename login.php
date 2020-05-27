@@ -25,8 +25,8 @@ Antes de mostar esta página se debió ejecutar lo siguiente
         <br>
         <form action='administrarPersonas.php' method='post'>
 	        <table>
-                Usuario: <input type="text" name="Usuario"><br>
-                Contraseña: <input type="password" name="Contrasena"><br>
+                Usuario: <input type="text" name="Usuario" value="<?php if (isset($_SESSION['user'])){ echo $_SESSION['user']; } ?>"><br>
+                Contraseña: <input type="password" name="Contrasena" value="<?php if (isset($_SESSION['pas'])){ echo $_SESSION['pas']; } ?>"><br>
 	        </table>
 	    <input type="submit" value='Iniciar Sesion' name='iniciarsesion'>
         </form>

@@ -24,11 +24,11 @@ Antes de mostar esta página se debió ejecutar lo siguiente
         <br>
         <form action='administrarPersonas.php' method='post'>
 	        <table>
-                Cedula: <input type="number" name="Cedula"><br>
-                Nombre: <input type="text" name="Nombre"><br>
-                Apellido: <input type="text" name="Apellido"><br>
-                Correo Electronico: <input type="email" name="CorreoElectronico"><br>
-                Edad: <input type="number" name="Edad"><br>
+                Cedula: <input type="number" name="Cedula" value="<?php if (isset($_SESSION['c'])){ echo $_SESSION['c']; } ?>"><br>
+                Nombre: <input type="text" name="Nombre" value="<?php if (isset($_SESSION['n'])){ echo $_SESSION['n']; } ?>"><br>
+                Apellido: <input type="text" name="Apellido" value="<?php if (isset($_SESSION['a'])){ echo $_SESSION['a']; } ?>"><br>
+                Correo Electronico: <input type="email" name="CorreoElectronico" value="<?php if (isset($_SESSION['ce'])){ echo $_SESSION['ce']; } ?>"><br>
+                Edad: <input type="number" name="Edad" value="<?php if (isset($_SESSION['e'])){ echo $_SESSION['e']; } ?>"><br>
 	        </table>
 	    <input type="submit" value='Guardar' name='guardar'>
         </form>
@@ -41,9 +41,9 @@ Antes de mostar esta página se debió ejecutar lo siguiente
         <br>
         <form action='administrarPersonas.php' method='post'>
 	        <table>
-                Nombre de Usuario: <input type="text" name="Nombre"><br>
-                Contraseña: <input type="password" name="Contrasena"><br>
-                Cedula: <input type="number" name="Cedula"><br>
+                Nombre de Usuario: <input type="text" name="Nombre" value="<?php if (isset($_SESSION['name'])){ echo $_SESSION['name']; } ?>"><br>
+                Contraseña: <input type="password" name="Contrasena" value="<?php if (isset($_SESSION['contr'])){ echo $_SESSION['contr']; } ?>"><br>
+                Cedula: <input type="number" name="Cedula" value="<?php if (isset($_SESSION['cc'])){ echo $_SESSION['cc']; } ?>"><br>
 	        </table>
 	    <input type="submit" value='Guardar' name='guardarusuario'>
         </form>

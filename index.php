@@ -9,7 +9,7 @@ $_SESSION['visitas']=1;
 ?>
 <html>
 	<head>
-		<title>Administrar Personas</title>
+		<title>Administrar Personas y Usuarios</title>
 	</head>	
 	<body>
 		<header>
